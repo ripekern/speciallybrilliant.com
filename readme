@@ -1,0 +1,3 @@
+%% update files on server
+sudo cp -fR /home/swenacus/Documents/websiteDev/sbman.net /var/www
+
