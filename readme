@@ -1,3 +1,10 @@
 %% update files on server
+%% move into folder of website
+
+git add .
+
 sudo cp -fR /home/swenacus/Documents/websiteDev/sbman.net /var/www
 
+git commit
+
+git push
