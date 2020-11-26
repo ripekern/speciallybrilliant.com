@@ -18,29 +18,29 @@ var app = {
   shipping : 0.00,
   products : [
       {
-        "name" : "Meet and greet with Bill Murray",
-        "price" : "19.95",
-        "img" : "https://i.ytimg.com/vi/NEV349KUBIg/maxresdefault.jpg",
+        "name" : "SIX BITCOIN CASH DECALS A.",
+        "price" : "2.99",
+        "img" : "DECALS6.jpg",
         "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
       },
       {
-        "name" : "Tap Water",
-        "price" : "0.99",
-        "img" : "http://i.ytimg.com/vi/Awtlfye_3q0/maxresdefault.jpg",
+        "name" : "SIX BITCOIN CASH DECALS B.",
+        "price" : "2.99",
+        "img" : "bitcoinCash.jpg",
         "desc" : "You decide"
       },
-      {
-        "name" : "Social Shower Curtain",
-        "price" : "40.00",
-        "img" : "https://dnrec.alpha.delaware.gov/wp-content/uploads/sites/2/2016/08/clean-water.jpg",
-        "desc" : "Always stay up-to-date with this very useless shower curtain!"
+  /*    {
+        "name" : "Crypto Currency Acceptance Training/Setup",
+        "price" : "360",
+        "img" : "prayer.png",
+        "desc" : "Will provide a step by step in person setup to help you start accepting it today!"
       },
       {
-        "name" : "Self stirring mug",
-        "img" : "https://images1.qualitylogoproducts.com/custom-mugs/white-ceramic-mug-superextralarge-261058.jpg",
-        "price" : "12.35",
-        "desc" : "Don't get tired!"
-      }
+        "name" : "Power Design Consultation",
+        "img" : "prayer.png",
+        "price" : "360",
+        "desc" : "Provides pay for a day of work to lay out a contract for your project!"
+      } */
     ],
 
   removeProduct: function () {
