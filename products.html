@@ -1,18 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-  <head>
-    <meta charset="utf-8">
-    <title>: Goods.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="script.js" async></script>
-
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-   <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=entypo"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-   <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/5175/utf-latest.min.css'><link rel="stylesheet" href="./style.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-  </head>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Goods</title>
+  <link href='css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="?family=entypo"><link rel="stylesheet" href="normalize.min.css">
+<link rel='stylesheet' href='utf-latest.min.css'><link rel="stylesheet" href="./style.css">
+<script src="prefixfree.min.js"></script>
 
   <body>
     <img class="img-banner" src="background.jpg" alt="banner sdfa">
@@ -33,43 +27,53 @@
       </div>
     <div class="wrapper">
       <article class="img-info">
-        <h2>FOR THE GOODS!</h2>
+       <h2>FOR THE GOODS!</h2>
 
-      <h3>SIX BITCOIN CASH DECALS A.
-      <p>Six pack of 2" x 5.25" Vinyl High Gloss "Bitcoin Cash Accepted Here" Decals.</p>
+        <div class="main">
+          <br>
 
-      <div class="_column checkout">
-        <button class="_btn _column product-plus">Add</button>
-      </div>
+          <section class="shopping-cart">
+            <ol class="ui-list shopping-cart--list" id="shopping-cart--list">
 
-      </h3>
-        <img class="img-background2" src="DECALS6.jpg" alt="Electrical Engineer">
-        <br><br><br>
-        <h3>SIX BITCOIN CASH DECALS B.
-        <p>Six pack of Destructible Vinyl Bitcoin Cash Decal ~ 2 x 3 inch.</p>
+              <script id="shopping-cart--list-item-template" type="text/template">
+                <li class="_grid shopping-cart--list-item">
+                  <div class="_column product-image">
+                    <img src="{{=img}}" alt="Item image" />
+                  </div>
+                  <div class="_column product-info">
+                    <h4 class="product-name">{{=name}}</h4>
+                    <p class="product-desc">{{=desc}}</p>
+                    <div class="price product-single-price">${{=price}}</div>
+                  </div>
+                  <div class="_column product-modifiers" data-product-price="{{=price}}">
+                    <div class="_grid">
+                      <button class="_btn _column product-subtract">&minus;</button>
+                      <div class="_column product-qty">0</div>
+                      <button class="_btn _column product-plus">&plus;</button>
+                    </div>
+                    <button class="_btn entypo-trash product-remove">Remove</button>
+                    <div class="price product-total-price">$0.00</div>
+                  </div>
+                </li>
+              </script>
 
-        <div class="_column checkout">
-          <button class="_btn _column product-plus">Add</button>
-        </div>
-
-        </h3>
-          <img class="img-background2" src="bitcoinCash.jpg" alt="Electrical Engineer">
-          <br><br><br>
-
+            </ol><br>
 
       </article>
     </div>
     </header>
     <footer>
-      <p>FOR THE SPECIALLY-BRILLIANT-COMPANY.</p>
-      <p><a href="mailto:speciallybrilliant@protonmail.com">~ speciallybrilliant@protonmail.com</a>
-        </p>
-      <p><a href="tel:509-671-4017">~ 509-671-4017</a></p>
-      <p>FOR THE DESIGN AND MAINTANANCE OF THIS WEBSITE IS BY THE SPECIALLY-BRILLIANT-COMPANY.
+      <h6>FOR THE SPECIALLY-BRILLIANT-COMPANY.<br>
+      <a href="mailto:speciallybrilliant@protonmail.com">~ speciallybrilliant@protonmail.com   </a>
+      <a href="tel:509-671-4017">~ 509-671-4017</a><br>
+      FOR THE DESIGN AND MAINTANANCE OF THIS WEBSITE IS BY THE SPECIALLY-BRILLIANT-COMPANY.
       FOR THIS AMERICAN-NATIONAL, NON-RESIDENT-NON-PERSON, ALL-RIGHTS-RESERVED, U.C.C.-1-308,
       AND COPYRIGHT/COPY-CLAIM OF THE GIST WITH THE ~278~292~315 OF THE UNITY-STATES IS WITH
-      THE CLAIMANT/PRIEST/KING: Swen-Aren OF THE Bergman.</p>
+      THE CLAIMANT/PRIEST/KING: Swen-Aren OF THE Bergman.</h6>
+
+
     </footer>
   </body>
-
+  <!-- partial -->
+    <script src='zepto.min.js'></script><script  src="./script.js"></script>
 </html>

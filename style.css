@@ -257,12 +257,12 @@ h1, */
   border-left: 1px solid #bdc3c7;
 }
 .product-subtract,
-.product-plus,
+btn checkout-btn entypo-forward,
 .product-qty {
   width: 33.330557%;
   background-color: transparent;
   color: #686868;
-  text-align: center;
+  text-align: right;
 }
 .product-qty {
   padding: .35em .75em;

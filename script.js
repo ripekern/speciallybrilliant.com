@@ -15,19 +15,19 @@ String.prototype.strip$ = function () {
 
 var app = {
 
-  shipping : 0.00,
+  shipping : 0.50,
   products : [
       {
         "name" : "SIX BITCOIN CASH DECALS A.",
         "price" : "2.99",
         "img" : "DECALS6.jpg",
-        "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        "desc" : "Six Pack of Destructible Vinyl Bitcoin Cash ~ 2 x 3 inch decals!"
       },
       {
         "name" : "SIX BITCOIN CASH DECALS B.",
         "price" : "2.99",
         "img" : "bitcoinCash.jpg",
-        "desc" : "You decide"
+        "desc" : "Six pack of 2 x 5.25 inch Vinyl High Gloss Bitcoin Cash Accepted Here Decals."
       },
   /*    {
         "name" : "Crypto Currency Acceptance Training/Setup",
@@ -100,11 +100,11 @@ var app = {
       subtotal += parseFloat( $(products[i]).find(".product-total-price").html().strip$() );
     }
 
-    shipping = (subtotal > 0 && subtotal < (100 / 1.06)) ? app.shipping : 0;
+    shipping = (subtotal > 0 && subtotal < (100 / 1.00)) ? app.shipping : 0;
 
     $("#subtotalCtr").find(".cart-totals-value").html( subtotal.to_$() );
-    $("#taxesCtr").find(".cart-totals-value").html( (subtotal * 0.06).to_$() );
-    $("#totalCtr").find(".cart-totals-value").html( (subtotal * 1.06 + shipping).to_$() );
+    $("#taxesCtr").find(".cart-totals-value").html( (subtotal * 0.00).to_$() );
+    $("#totalCtr").find(".cart-totals-value").html( (subtotal * 1.00 + shipping).to_$() );
     $("#shippingCtr").find(".cart-totals-value").html( shipping.to_$() );
   },
 
