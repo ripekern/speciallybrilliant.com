@@ -625,3 +625,5 @@ button {
   margin-top: 10px;
   align-self: flex-end;
 }
+
+.tab { margin-left: 40px; }
