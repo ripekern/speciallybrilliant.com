@@ -25,7 +25,7 @@ header {
 .main-nav li {
   display: inline-table;
   float: left;
-  color: black;
+  color: #09090c;
 }
 
 
@@ -35,7 +35,7 @@ header {
 }
 
 .main-nav li a {
-  color: #1b2a49;
+  color: #09090c;
   text-decoration: none;
   padding: 3px 9px;
   font-family:"Roboto", sans-sans-serif;
@@ -58,7 +58,7 @@ header {
   font-family: roboto;
   font-size: 40px;
 
-  color: #1b2a49;
+  color: #09090c;
   line-height: 55px;
 }
 
@@ -66,7 +66,7 @@ header {
   padding: 0px 30px 20px;
   font-family: roboto;
   font-size: 16px;
-  color: #1b2a49;
+  color: #09090c;
   line-height: 24px;
 }
 
@@ -74,6 +74,16 @@ header {
   width: 100%;
 }
 
+p {
+ font-family: Georgia, "Times New Roman", Times, serif;
+ font-size: 12px;
+ color: #000000;
+ background-color: ##e2e2e2;
+ border:3px;
+ border-style: groove;
+ border-color: #b0b4c9;
+ padding: 1em;
+}
 
 footer {
   color: #0000EE;
