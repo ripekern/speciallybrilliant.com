@@ -322,7 +322,7 @@ btn checkout-btn entypo-forward,
 .cart-totals ._column:hover .cart-totals-key {
   color: #333;
 }
-.cart-totals-value {
+. {
   font-size: 2em;
 }
 ._column.checkout {

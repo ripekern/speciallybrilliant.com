@@ -1,7 +1,6 @@
-/* jslint browser: true*/
-/*global $*/
+//
 
-// https://github.com/jasonmoo/t.js
+
 (function(){function c(a){this.t=a}function l(a,b){for(var e=b.split(".");e.length;){if(!(e[0]in a))return!1;a=a[e.shift()]}return a}function d(a,b){return a.replace(h,function(e,a,i,f,c,h,k,m){var f=l(b,f),j="",g;if(!f)return"!"==i?d(c,b):k?d(m,b):"";if(!i)return d(h,b);if("@"==i){e=b._key;a=b._val;for(g in f)f.hasOwnProperty(g)&&(b._key=g,b._val=f[g],j+=d(c,b));b._key=e;b._val=a;return j}}).replace(k,function(a,c,d){return(a=l(b,d))||0===a?"%"==c?(new Option(a)).innerHTML.replace(/"/g,"&quot;"):
 a:""})}var h=/\{\{(([@!]?)(.+?))\}\}(([\s\S]+?)(\{\{:\1\}\}([\s\S]+?))?)\{\{\/\1\}\}/g,k=/\{\{([=%])(.+?)\}\}/g;c.prototype.render=function(a){return d(this.t,a)};window.t=c})();
 // end of 't';
@@ -29,19 +28,7 @@ var app = {
         "img" : "bitcoinCash.jpg",
         "desc" : "Six pack of 2 x 5.25 inch Vinyl High Gloss Bitcoin Cash Accepted Here Decals."
       },
-  /*    {
-        "name" : "Crypto Currency Acceptance Training/Setup",
-        "price" : "360",
-        "img" : "prayer.png",
-        "desc" : "Will provide a step by step in person setup to help you start accepting it today!"
-      },
-      {
-        "name" : "Power Design Consultation",
-        "img" : "prayer.png",
-        "price" : "360",
-        "desc" : "Provides pay for a day of work to lay out a contract for your project!"
-      } */
-    ],
+            ],
 
   removeProduct: function () {
     "use strict";
@@ -59,10 +46,36 @@ var app = {
     "use strict";
 
     var qtyCtr = $(this).prev(".product-qty"),
-        quantity = parseInt(qtyCtr.html(), 10) + 1;
-
+    quantity = parseInt(qtyCtr.html(), 10) + 1;
     app.updateProductSubtotal(this, quantity);
   },
+
+/*let carts = document.querySelectorAll('.add-cart');
+
+  for (let i=0; i < carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+        console.log("javascript is running")
+        cartNumbers();
+      })
+  }
+
+  function cartNumbers() {
+    localStorage.setItem('cartNumbers', 1);
+  }
+
+      addProduct();
+    })
+  }
+
+    if (Modernizr.localStorage) {
+      // window.localStorage is available!
+      localStorage.setItem('.product-qty', addProduct + 1);
+    } else {
+      localStorage.setItem('.product-qty', 1);
+      // no native support for HTML5 storage :(
+      // maybe try dojox.storage or a third-party solution
+    }
+*/
 
   subtractProduct: function () {
     "use strict";
