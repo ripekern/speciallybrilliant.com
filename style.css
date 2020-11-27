@@ -25,6 +25,7 @@ header {
 .main-nav li {
   display: inline-table;
   float: left;
+  color: black;
 }
 
 
