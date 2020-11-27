@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>: NEWS.</title>
-    <link rel='stylesheet' href='utf-latest.min.css'><link rel="stylesheet" href="./style.css">
-  </head>
 
-  <body>
-    <img class="img-banner" src="background.jpg" alt="banner sdfa">
-    <header>
-      <ul class="main-nav">
-      <h1><li class="active"><a href="cart.html">Cart </a></li></h1>
+<head>
+  <meta charset="utf-8">
+  <title>: NEWS.</title>
+  <link rel='stylesheet' href='utf-latest.min.css'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <img class="img-banner" src="background.jpg" alt="banner sdfa">
+  <header>
+    <ul class="main-nav">
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
     </ul><br><br>
-      <div class="row">
-        <ul class="main-nav">
-          <li><a href="index.html">Home </a></li>
-          <li><a href="products.html">Goods </a></li>
-          <li><a href="services.html">Services </a></li>
-          <li><a href="about.html">Biography </a></li>
-          <li><a href="contact.html">Contact </a></li>
-          <li class="active"><a href="news.html">News </a></li>
-          <li><a href="FAQ.html">FAQ </a></li>
-        </ul>
-      </div>
+    <div class="row">
+      <ul class="main-nav">
+        <li><a href="index.html">Home </a></li>
+        <li><a href="products.html">Goods </a></li>
+        <li><a href="services.html">Services </a></li>
+        <li><a href="about.html">Biography </a></li>
+        <li><a href="contact.html">Contact </a></li>
+        <li class="active"><a href="news.html">News </a></li>
+        <li><a href="FAQ.html">FAQ </a></li>
+      </ul>
+    </div>
     <div class="wrapper">
       <article class="img-info">
         <h2>FOR THE NEWS!</h2>
@@ -33,15 +41,17 @@
       </article>
 
     </div>
-    </header>
-    <footer>
-      <h6>FOR THE SPECIALLY-BRILLIANT-COMPANY.<br>
-      <a href="mailto:speciallybrilliant@protonmail.com">~ speciallybrilliant@protonmail.com   </a>
+  </header>
+  <footer>
+    <h6>FOR THE SPECIALLY-BRILLIANT-COMPANY.<br>
+      <a href="mailto:speciallybrilliant@protonmail.com">~ speciallybrilliant@protonmail.com </a>
       <a href="tel:509-671-4017">~ 509-671-4017</a><br>
       FOR THE DESIGN AND MAINTANANCE OF THIS WEBSITE IS BY THE SPECIALLY-BRILLIANT-COMPANY.
       FOR THIS AMERICAN-NATIONAL, NON-RESIDENT-NON-PERSON, ALL-RIGHTS-RESERVED, U.C.C.-1-308,
       AND COPYRIGHT/COPY-CLAIM OF THE GIST WITH THE ~278~292~315 OF THE UNITY-STATES IS WITH
-      THE CLAIMANT/PRIEST/KING: Swen-Aren OF THE Bergman.</h6>
-    </footer>
-  </body>
+      THE CLAIMANT/PRIEST/KING: Swen-Aren OF THE Bergman.
+    </h6>
+  </footer>
+</body>
+
 </html>
