@@ -1,5 +1,4 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
 }
@@ -9,8 +8,9 @@ body {
 }
 
 header {
-  </*background-image: url(background.jpg);*/>
-  height: 100%;
+  <
+  /*background-image: url(background.jpg);*/
+  >height: 100%;
   background-size: cover;
   background-position: center;
   background-color: #c9d1d3;
@@ -28,7 +28,6 @@ header {
   color: #09090c;
 }
 
-
 .main-nav li.active a {
   border: 1px solid #00909e;
   border-radius: 9px;
@@ -38,7 +37,7 @@ header {
   color: #09090c;
   text-decoration: none;
   padding: 3px 9px;
-  font-family:"Roboto", sans-sans-serif;
+  font-family: "Roboto", sans-sans-serif;
 }
 
 .wrapper {
@@ -57,7 +56,6 @@ header {
   padding: 30px 30px 20px;
   font-family: roboto;
   font-size: 40px;
-
   color: #09090c;
   line-height: 55px;
 }
@@ -74,12 +72,11 @@ header {
   width: 100%;
 }
 
-
 p {
- font-family:"Roboto", sans-sans-serif;
- font-size: 12px;
- color: #000000;
- background-color: ##e2e2e2;
+  font-family: "Roboto", sans-sans-serif;
+  font-size: 12px;
+  color: #000000;
+  background-color: ##e2e2e2;
 }
 
 h3 {
@@ -122,12 +119,12 @@ footer {
   }
 
   .img-background2 {
-    padding-top: 30px;+
+    padding-top: 30px;
+    +
   }
 }
 
-@media only screen and (min-width: 1000px){
-
+@media only screen and (min-width: 1000px) {
   .wrapper {
     width: auto;
   }
@@ -145,22 +142,11 @@ footer {
     padding: 20px 0px 0px 30px;
   }
 
-
-
   .img-background2 {
     width: 42%;
     padding: 20px 20px 20px 20px;
-
   }
 }
-
-
-
-
-
-
-
-
 
 /*
 I wanted to go with a mobile first approach, but it actually lead to more verbose CSS in this case, so I've gone web first. Can't always force things...
@@ -250,6 +236,7 @@ label {
   margin-bottom: 15px;
   border-bottom: 1px solid #eee;
 }
+
 .column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
   text-indent: -9999px;
 }
@@ -260,23 +247,29 @@ label {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
+
 .product .product-image {
   text-align: center;
 }
+
 .product .product-image img {
   width: 100px;
 }
+
 .product .product-details .product-title {
   margin-right: 20px;
   font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
+
 .product .product-details .product-description {
   margin: 5px 20px 5px 0;
   line-height: 1.4em;
 }
+
 .product .product-quantity input {
   width: 40px;
 }
+
 .product .remove-product {
   border: 0;
   padding: 4px 8px;
@@ -286,6 +279,7 @@ label {
   font-size: 12px;
   border-radius: 3px;
 }
+
 .product .remove-product:hover {
   background-color: #a44;
 }
@@ -297,17 +291,20 @@ label {
   width: 100%;
   margin-bottom: 10px;
 }
+
 .totals .totals-item label {
   float: left;
   clear: both;
   width: 79%;
   text-align: right;
 }
+
 .totals .totals-item .totals-value {
   float: right;
   width: 21%;
   text-align: right;
 }
+
 .totals .totals-item-total {
   font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
@@ -343,6 +340,7 @@ label {
     float: right;
     width: auto;
   }
+
   .product-image img {
     margin: 0 0 10px 10px;
   }
@@ -361,6 +359,7 @@ label {
   .product-quantity {
     width: 100px;
   }
+
   .product-quantity input {
     margin-left: 20px;
   }
@@ -378,6 +377,7 @@ label {
     width: 70px;
   }
 }
+
 /* Make more adjustments for phone */
 @media screen and (max-width: 350px) {
   .product-removal {
@@ -398,183 +398,177 @@ label {
   .totals .totals-item label {
     width: 60%;
   }
+
   .totals .totals-item .totals-value {
     width: 40%;
   }
 }
 
-
-
-
-
-
 #fcf-form {
-    display:block;
+  display: block;
 }
 
 .fcf-body {
-    margin: 0;
-    font-family: -apple-system, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-    padding: 30px;
-    padding-bottom: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    max-width: 100%;
+  margin: 0;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  padding: 30px;
+  padding-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  max-width: 100%;
 }
 
 .fcf-form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .fcf-input-group {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: 100%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
 }
 
 .fcf-form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    outline: none;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  outline: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .fcf-form-control:focus {
-    border: 1px solid #313131;
+  border: 1px solid #313131;
 }
 
 select.fcf-form-control[size], select.fcf-form-control[multiple] {
-    height: auto;
+  height: auto;
 }
 
 textarea.fcf-form-control {
-    font-family: -apple-system, Arial, sans-serif;
-    height: auto;
+  font-family: -apple-system, Arial, sans-serif;
+  height: auto;
 }
 
 label.fcf-label {
-    display: inline-block;
-    margin-bottom: 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 .fcf-credit {
-    padding-top: 10px;
-    font-size: 0.9rem;
-    color: #545b62;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #545b62;
 }
 
 .fcf-credit a {
-    color: #545b62;
-    text-decoration: underline;
+  color: #545b62;
+  text-decoration: underline;
 }
 
 .fcf-credit a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+  color: #0056b3;
+  text-decoration: underline;
 }
 
 .fcf-btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .fcf-btn {
-        transition: none;
-    }
+  .fcf-btn {
+    transition: none;
+  }
 }
 
 .fcf-btn:hover {
-    color: #212529;
-    text-decoration: none;
+  color: #212529;
+  text-decoration: none;
 }
 
 .fcf-btn:focus, .fcf-btn.focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .fcf-btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .fcf-btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 .fcf-btn-primary:focus, .fcf-btn-primary.focus {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 
 .fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
 }
 
 .fcf-btn-block {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .fcf-btn-block+.fcf-btn-block {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
-    width: 100%;
+  width: 100%;
 }
 
 h6 {
   padding: 10px;
   color: #465881;
 }
-
-
 
 input, button, textarea {
   border: 2px solid rgba(0, 0, 0, 0.6);
@@ -583,6 +577,7 @@ input, button, textarea {
   box-shadow: none;
   padding: 5px;
 }
+
 input:focus, button:focus, textarea:focus {
   outline: none;
 }
@@ -604,6 +599,7 @@ button {
   margin: 0 auto;
   box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
 }
+
 .feedback-header {
   text-align: center;
   padding: 8px;
@@ -611,20 +607,25 @@ button {
   font-weight: 700;
   border-bottom: 1px solid black;
 }
+
 .feedback-body {
   padding: 20px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
+
 .feedback-body__message {
   margin-top: 10px;
 }
+
 .feedback-body button {
   margin-top: 10px;
   align-self: flex-end;
 }
 
-.tab { margin-left: 40px; }
+.tab {
+  margin-left: 40px;
+}

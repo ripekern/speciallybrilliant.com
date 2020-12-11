@@ -4,27 +4,26 @@ var fadeTime = 300;
 
 
 /* Assign actions */
-$('.product-quantity input').change( function() {
+$('.product-quantity input').change(function() {
   updateQuantity(this);
 });
 
-$('.product-removal button').click( function() {
+$('.product-removal button').click(function() {
   removeItem(this);
 });
 
 
 /* Recalculate cart */
-function recalculateCart()
-{
+function recalculateCart() {
   var subtotal = 0;
 
   /* Sum up row totals */
-  $('.product').each(function () {
+  $('.product').each(function() {
     subtotal += parseFloat($(this).children('.product-line-price').text());
   });
 
   /* Calculate totals */
-    var shipping = (subtotal > 0 ? shippingRate : 0);
+  var shipping = (subtotal > 0 ? shippingRate : 0);
   var total = subtotal + shipping;
 
   /* Update totals display */
@@ -32,9 +31,9 @@ function recalculateCart()
     $('#cart-subtotal').html(subtotal.toFixed(2));
     $('#cart-shipping').html(shipping.toFixed(2));
     $('#cart-total').html(total.toFixed(2));
-    if(total == 0){
+    if (total == 0) {
       $('.checkout').fadeOut(fadeTime);
-    }else{
+    } else {
       $('.checkout').fadeIn(fadeTime);
     }
     $('.totals-value').fadeIn(fadeTime);
@@ -60,8 +59,7 @@ function loadStuff() {
 
 
 /* Update quantity */
-function updateQuantity(quantityInput)
-{
+function updateQuantity(quantityInput) {
   /* Calculate line price */
   var productRow = $(quantityInput).parent().parent();
   var price = parseFloat(productRow.children('.product-price').text());
@@ -69,7 +67,7 @@ function updateQuantity(quantityInput)
   var linePrice = price * quantity;
 
   /* Update line price display and recalc cart totals */
-  productRow.children('.product-line-price').each(function () {
+  productRow.children('.product-line-price').each(function() {
     $(this).fadeOut(fadeTime, function() {
       $(this).text(linePrice.toFixed(2));
       recalculateCart();
@@ -83,8 +81,7 @@ function updateQuantity(quantityInput)
 
 
 /* Remove item from cart */
-function removeItem(removeButton)
-{
+function removeItem(removeButton) {
   /* Remove row from DOM and recalc cart total */
   var productRow = $(removeButton).parent().parent();
   productRow.slideUp(fadeTime, function() {
@@ -96,9 +93,9 @@ function removeItem(removeButton)
 
 
 
-(function () {
-    var btn = document.getElementsByClassName("feedback-body__submit")[0];
-    btn.onclick = function(e) {
-        e.preventDefault()
-    }
- })()
+(function() {
+  var btn = document.getElementsByClassName("feedback-body__submit")[0];
+  btn.onclick = function(e) {
+    e.preventDefault()
+  }
+})()
