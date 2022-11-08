@@ -307,6 +307,24 @@ https://templatemo.com/tm-536-dream-pulse
                 </div>
 
 
+                <iframe id="appointy-iframe" class="no-border" src="https://booking.appointy.com/swenbergman?isgadget=1&autoheight=1"  scrolling="no" width="100%" frameBorder="0"></iframe>
+                <script>
+                    (function() {
+                        const ifrm = document.getElementById("appointy-iframe");
+                        window.addEventListener("message", function (e) {
+                            const d = e.data || {};
+                            if (d.type === "height"){
+                                ifrm.style.height = d.data + "px";
+                            }
+                            if (d.type === "scroll") {
+                                ifrm.scrollIntoView();
+                            }
+                        });
+                    })();
+                </script>
+
+
+
 <!--
                 <div class="col-xl-6 mb-5">
                   <div class="tm-contact-form-wrap">
