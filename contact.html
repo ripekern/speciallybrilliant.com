@@ -125,30 +125,30 @@
 					      		<div id="form-message-success" class="mb-4">
 					            Your message was sent, thank you!
 					      		</div>
-										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<form action="https://sheetdb.io/api/v1/4skyo1bsag6la" method="POST" id="contactForm" name="contactForm" class="contactForm" id="sheetdb-form">
 											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group">
 														<label class="label" for="name">Full Name</label>
-														<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+														<input type="text" class="form-control" name="data[name]" id="name" placeholder="Name">
 													</div>
 												</div>
 												<div class="col-md-6">
 													<div class="form-group">
 														<label class="label" for="email">Email Address</label>
-														<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+														<input type="email" class="form-control" name="data[email]" id="email" placeholder="Email">
 													</div>
 												</div>
 												<div class="col-md-12">
 													<div class="form-group">
 														<label class="label" for="subject">Subject</label>
-														<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+														<input type="text" class="form-control" name="data[subject]" id="subject" placeholder="Subject">
 													</div>
 												</div>
 												<div class="col-md-12">
 													<div class="form-group">
 														<label class="label" for="#">Message</label>
-														<textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+														<textarea name="message" class="form-control" id="data[message]" cols="30" rows="4" placeholder="Message"></textarea>
 													</div>
 												</div>
 												<div class="col-md-12">
@@ -159,6 +159,27 @@
 												</div>
 											</div>
 										</form>
+
+
+                    <script>
+                        var form = document.getElementById('sheetdb-form');
+                    form.addEventListener("submit", e => {
+                      e.preventDefault();
+                      fetch(form.action, {
+                          method : "POST",
+                          body: new FormData(document.getElementById("sheetdb-form")),
+                      }).then(
+                          response => response.json()
+                      ).then((html) => {
+                        // you can put any JS code here
+                        window.open('contact.html', '_blank');
+
+                      });
+                    });
+                    </script>
+
+
+
 									</div>
 								</div>
 								<div class="col-md-5 d-flex align-items-stretch">
