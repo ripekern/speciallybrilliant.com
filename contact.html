@@ -162,7 +162,8 @@
                             <div class="g-recaptcha" data-sitekey="6LcyWGYjAAAAAIORG3wrkcvzS6XPXY6q8IK2wwyh" data-callback="callback">
                             <br/>
                             </div>
-                            <input id="submit-button" type="submit" value="Send Message" class="btn btn-primary" disabled>
+                            <br />
+                            <button id="submit-button" type="submit" disabled>Submit</button>
 														<div class="submitting"></div>
 													</div>
 												</div>
@@ -187,8 +188,8 @@
                             response => response.json()
                         ).then((html) => {
                           // you can put any JS code here
-                          window.location.href = 'https://speciallybrilliant.com/thank-you';
-                          alert('success')
+                          // window.location.href = 'https://speciallybrilliant.com/thank-you';
+                          alert('success');
                         });
                       });
                     </script>
