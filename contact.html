@@ -154,17 +154,24 @@
 														<textarea name="data[message]" class="form-control" id="message" cols="30" rows="4" placeholder="Contact us today!"></textarea>
 													</div>
 												</div>
-                        <div class="g-recaptcha" data-sitekey="6LcyWGYjAAAAAIORG3wrkcvzS6XPXY6q8IK2wwyh"></div>
+                        <div class="g-recaptcha" data-sitekey="6LcyWGYjAAAAAIORG3wrkcvzS6XPXY6q8IK2wwyh" data-callback="callback"></div>
                               <br/>
 
                         <div class="col-md-12">
 													<div class="form-group">
-														<input type="submit" value="Send Message" class="btn btn-primary">
+														<input type="submit" value="Send Message" class="btn btn-primary" id="submit-button" type="submit" disabled>
 														<div class="submitting"></div>
 													</div>
 												</div>
 											</div>
 										</form>
+
+                    <script type="text/javascript">
+                          function callback() {
+                            const submitButton = document.getElementById("submit-button");
+                            submitButton.removeAttribute("disabled");
+                          }
+                        </script>
 
                     <script>
                     var form = document.getElementById('sheetdb-form');
