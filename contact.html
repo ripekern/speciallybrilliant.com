@@ -128,7 +128,7 @@
 										<div id="form-message-warning" class="mb-4">
 
                     </div>
-					      		<div id="form-message-success" class="mb-4">
+					      		<div id="success" class="mb-4">
 					            Your message was sent, thank you!
 					      		</div>
 										<form action="https://sheetdb.io/api/v1/4skyo1bsag6la" method="POST" id="contactForm" name="contactForm" class="contactForm" id="sheetdb-form">
@@ -159,15 +159,22 @@
 												</div>
                         <div class="col-md-12">
 													<div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6LcyWGYjAAAAAIORG3wrkcvzS6XPXY6q8IK2wwyh" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry" data-error-callback="onRecaptchaError">
+                            <div class="g-recaptcha" data-sitekey="6LcyWGYjAAAAAIORG3wrkcvzS6XPXY6q8IK2wwyh" data-callback="callback">
                             <br/>
                             </div>
-                            <input type="submit" value="Send Message" class="btn btn-primary">
+                            <input id="submit-button" type="submit" value="Send Message" class="btn btn-primary" disabled>
 														<div class="submitting"></div>
 													</div>
 												</div>
 											</div>
 										</form>
+
+                    <script type="text/javascript">
+                         function callback() {
+                           const submitButton = document.getElementById("submit-button");
+                           submitButton.removeAttribute("disabled");
+                         }
+                       </script>
 
                     <script>
                       var form = document.getElementById('sheetdb-form');
@@ -180,6 +187,7 @@
                             response => response.json()
                         ).then((html) => {
                           // you can put any JS code here
+                          window.location.href = 'https://speciallybrilliant.com/thank-you';
                           alert('success')
                         });
                       });
