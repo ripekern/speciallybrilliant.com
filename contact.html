@@ -125,7 +125,9 @@
 								<div class="col-md-7">
 									<div class="contact-wrap w-100 p-md-5 p-4">
 										<h3 class="mb-4">Contact Us</h3>
-										<div id="form-message-warning" class="mb-4"></div>
+										<div id="form-message-warning" class="mb-4">
+
+                    </div>
 					      		<div id="form-message-success" class="mb-4">
 					            Your message was sent, thank you!
 					      		</div>
@@ -155,10 +157,6 @@
 														<textarea name="data[message]" class="form-control" id="message" cols="30" rows="4" placeholder="Contact us today!"></textarea>
 													</div>
 												</div>
-
-
-
-
                         <div class="col-md-12">
 													<div class="form-group">
                             <div class="g-recaptcha" data-sitekey="6LcyWGYjAAAAAIORG3wrkcvzS6XPXY6q8IK2wwyh" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry" data-error-callback="onRecaptchaError">
@@ -172,20 +170,19 @@
 										</form>
 
                     <script>
-                    var form = document.getElementById('sheetdb-form');
-                form.addEventListener("submit", e => {
-                  e.preventDefault();
-                  fetch(form.action, {
-                      method : "POST",
-                      body: new FormData(document.getElementById("sheetdb-form")),
-                  }).then(
-                      response => response.json()
-                  ).then((html) => {
-                    // you can put any JS code here
-                    window.open('contact.html', '_blank');
-
-                  });
-                });
+                      var form = document.getElementById('sheetdb-form');
+                      form.addEventListener("submit", e => {
+                        e.preventDefault();
+                        fetch(form.action, {
+                            method : "POST",
+                            body: new FormData(document.getElementById("sheetdb-form")),
+                        }).then(
+                            response => response.json()
+                        ).then((html) => {
+                          // you can put any JS code here
+                          alert('success')
+                        });
+                      });
                     </script>
 
 									</div>
