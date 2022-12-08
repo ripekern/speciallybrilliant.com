@@ -1,7 +1,7 @@
 <?php
 
 // Google reCAPTCHA API keys settings
-$secretKey = '6Ld3sWMjAAAAACNoVAFOMSt6fCCdNhpw23gT7XZU';
+//$secretKey = '6Ld3sWMjAAAAACNoVAFOMSt6fCCdNhpw23gT7XZU';
 
 // Email settings
 $recipientEmail = 'swenabergman@gmail.com';
