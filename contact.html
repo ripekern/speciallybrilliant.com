@@ -17,8 +17,12 @@
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
+     </script>
 
 
   </head>
@@ -55,7 +59,7 @@
 	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
 	        	<li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
 	        	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-	          <li class="nav-item"><a href="https://speciallybrilliant.wordpress.com/" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="https://swen-aren.blogspot.com/" class="nav-link">Blog</a></li>
 	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
@@ -125,14 +129,12 @@
 								<div class="col-md-7">
 									<div class="contact-wrap w-100 p-md-5 p-4">
 										<h3 class="mb-4">Contact Us</h3>
-										<div id="form-message-warning" class="mb-4">
-
-                    </div>
-					      		<div id="success" class="mb-4">
+										<div id="form-message-warning" class="mb-4"></div>
+					      		<div id="form-message-success" class="mb-4">
 					            Your message was sent, thank you!
 					      		</div>
 										<form action="https://sheetdb.io/api/v1/4skyo1bsag6la" method="POST" id="contactForm" name="contactForm" class="contactForm" id="sheetdb-form">
-                      <div class="row">
+											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group">
 														<label class="label" for="name">Full Name</label>
@@ -157,41 +159,40 @@
 														<textarea name="data[message]" class="form-control" id="message" cols="30" rows="4" placeholder="Contact us today!"></textarea>
 													</div>
 												</div>
+
+
+
+
                         <div class="col-md-12">
 													<div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6LcyWGYjAAAAAIORG3wrkcvzS6XPXY6q8IK2wwyh" data-callback="callback">
-                            <br/>
-                            </div>
-                            <br />
-                            <button id="submit-button" type="submit" disabled>Submit</button>
+														<input type="submit" value="Send Message" class="btn btn-primary">
 														<div class="submitting"></div>
 													</div>
+                          <div class="form-group">
+                            <button class="g-recaptcha"
+                                    data-sitekey="6Ld3sWMjAAAAAIPJQRKZdAThzhJiXyboDNzp9br2"
+                                    data-callback='onSubmit'
+                                    data-action='submit'>Submit</button>
+                          </div>
 												</div>
 											</div>
 										</form>
 
-                    <script type="text/javascript">
-                         function callback() {
-                           const submitButton = document.getElementById("submit-button");
-                           submitButton.removeAttribute("disabled");
-                         }
-                       </script>
-
                     <script>
-                      var form = document.getElementById('sheetdb-form');
-                      form.addEventListener("submit", e => {
-                        e.preventDefault();
-                        fetch(form.action, {
-                            method : "POST",
-                            body: new FormData(document.getElementById("sheetdb-form")),
-                        }).then(
-                            response => response.json()
-                        ).then((html) => {
-                          // you can put any JS code here
-                          // window.location.href = 'https://speciallybrilliant.com/thank-you';
-                          alert('success');
-                        });
-                      });
+                    var form = document.getElementById('sheetdb-form');
+                form.addEventListener("submit", e => {
+                  e.preventDefault();
+                  fetch(form.action, {
+                      method : "POST",
+                      body: new FormData(document.getElementById("sheetdb-form")),
+                  }).then(
+                      response => response.json()
+                  ).then((html) => {
+                    // you can put any JS code here
+                    window.open('contact.html', '_blank');
+
+                  });
+                });
                     </script>
 
 									</div>
@@ -268,7 +269,7 @@
 						<div class="block-21 mb-4 d-flex">
               <a class="img mr-4 rounded" style="background-image: url(images/image_1.jpg);"></a>
               <div class="text">
-                <h3 class="heading"><a href="https://speciallybrilliant.wordpress.com/">You can have your windows done every season!</a></h3>
+                <h3 class="heading"><a href="https://swen-aren.blogspot.com/">You can have your windows done every season!</a></h3>
                 <div class="meta">
                   <div><a href="#"><span class="icon-calendar"></span> Mar. 04, 2020</a></div>
                   <div><a href="#"><span class="icon-person"></span> Admin</a></div>
@@ -279,7 +280,7 @@
             <div class="block-21 mb-4 d-flex">
               <a class="img mr-4 rounded" style="background-image: url(images/image_2.jpg);"></a>
               <div class="text">
-                <h3 class="heading"><a href="https://speciallybrilliant.wordpress.com/">Painting your Home can preserve it for many years!</a></h3>
+                <h3 class="heading"><a href="https://swen-aren.blogspot.com/">Painting your Home can preserve it for many years!</a></h3>
                 <div class="meta">
                   <div><a href="#"><span class="icon-calendar"></span> Mar. 04, 2020</a></div>
                   <div><a href="#"><span class="icon-person"></span> Admin</a></div>
@@ -296,7 +297,7 @@
               <li><a href="services.html" class="py-1 d-block">Services</a></li>
               <li><a href="portfolio.html" class="py-1 d-block">Portfolio</a></li>
               <li><a href="pricing.html" class="py-1 d-block">Pricing</a></li>
-              <li><a href="https://speciallybrilliant.wordpress.com/" class="py-1 d-block">Blog</a></li>
+              <li><a href="https://swen-aren.blogspot.com/" class="py-1 d-block">Blog</a></li>
               <li><a href="contact.html" class="py-1 d-block">Contact</a></li>
             </ul>
 					</div>
